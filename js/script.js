@@ -1,13 +1,21 @@
 const box = document.querySelector('.box');
 
-box.addEventListener('touchstart', () => {
+box.addEventListener('touchstart', start);
+
+box.addEventListener('touchend', end);
+
+box.addEventListener('touchmove', move);
+
+function start() {
     box.textContent = 'Ты дотронулся до меня!!!!';
-});
+}
 
-box.addEventListener('touchend', () => {
+function end() {
     box.textContent = 'Дотронься!!!';
-});
+}
 
-box.addEventListener('touchmove', () => {
+function move() {
     box.textContent = 'Ты водишь по мне пальцем!!!';
-});
+}
+
+
